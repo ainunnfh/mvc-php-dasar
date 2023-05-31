@@ -42,6 +42,7 @@ class PesananTiket extends Database
 
     public function createPesanan()
     {
+        echo "CREATING..";
         $nama_lengkap = $_POST['nama_lengkap'] ?? '';
         $no_id = @$_POST['no_id'];
         $no_hp = @$_POST['no_hp'];
@@ -57,7 +58,7 @@ class PesananTiket extends Database
             echo "<div>
             <script>
             alert('berhasil memesan bus');
-            window.location.href = '../Views/form.php';
+            window.location.href = '../views/pesanan.php';
             </script>
             </div>";
         } else {
@@ -78,7 +79,7 @@ class PesananTiket extends Database
             echo "<div>
         <script>
         alert('Berhasil Menghapus Data');
-        window.location.href = '../Views/Pesanan.php';
+        window.location.href = '../views/pesanan.php';
         </script>
         </div>";
         } else {
@@ -89,6 +90,7 @@ class PesananTiket extends Database
 
     public function updatePesanan()
     {
+        echo "UPDATING..";
         $id_pemesan = @$_POST['id'];
 
         $nama_lengkap = @$_POST['nama_lengkap'];
@@ -126,6 +128,6 @@ if (isset($_GET['is_deleting']) && isset($_GET['id'])) {
     $pesanan->deletePesanan();
 };
 
-if (isset($_POST['is_updating']) && isset($_GET['id'])) {
+if (isset($_POST['is_updating']) && isset($_POST['id'])) {
     $pesanan->updatePesanan();
 }

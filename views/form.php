@@ -47,7 +47,7 @@ if (isset($_GET['id'])) {
 
 <body>
     <div class='container'>
-        <form class='mt-4' action="<?= $to_root ?>/controllers/Pesanan.php?" method='post'>
+        <form class='mt-4' action="<?= $to_root ?>controllers/Pesanan.php?" method='post'>
             <?php
             if ($defaultValue['id'] == '') {
                 echo "<input type='hidden' name='is_creating' value='true' />";
@@ -56,7 +56,6 @@ if (isset($_GET['id'])) {
                 echo "<input type='hidden' name='id' value='$defaultValue[id]' />";
             }
             ?>
-            <input type="hidden" name="is_creating" value="true" />
             <h1 class='mb-3'> Form Pemesanan Tiket Bus</h1>
             <div class="mb-3 row">
                 <label for="nama_lengkap" class="col-sm-2 col-form-label"> Nama Lengkap </label>

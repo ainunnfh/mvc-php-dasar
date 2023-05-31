@@ -36,6 +36,7 @@ $data = $pesanan->daftarPesanan();
                     <th>Jadwal Keberangkatan</th>
                     <th>Jumlah Penumpang</th>
                     <th>Jumlah Penumpang Lansia</th>
+                    <th>Jenis</th>
                     <th>Harga</th>
                     <th colspan="2">Gambar</th>
                     <th>Total Harga</th>
@@ -57,14 +58,15 @@ $data = $pesanan->daftarPesanan();
                         <td><?= $currentData['kelas_penumpang'] ?></td>
                         <td><?= $currentData['jadwal_keberangkatan'] ?></td>
                         <td><?= $currentData['jumlah_penumpang'] ?></td>
+                        <td><?= $currentData['jumlah_penumpang_lansia'] ?></td>
                         <td><?= $currentData['jenis'] ?></td>
                         <td><?= $currentData['harga'] ?></td>
                         <td><img src="../images/<?= $currentData['gambar_bus'] ?>" style="width: 100px; height: 100px; object-fit: cover;" alt=""></td>
                         <td><img src="../images/<?= $currentData['gambar_interior'] ?>" style="width: 100px; height: 100px; object-fit: cover;" alt=""></td>
                         <td><?= $currentData['total_harga'] ?></td>
                         <td>
-                            <a href="<?= $to_root ?>/controllers/Pesanan.php?id=<?= $currentData['id'] ?>&is_deleting=true" class="btn btn-danger"> Delete</a>
-                            <a href="../Views/form.php?id=<?= $currentData['id'] ?>" class="btn btn-warning"> Update</a>
+                            <a href="<?= $to_root ?>/controllers/Pesanan.php?id=<?= $currentData['id'] ?>&is_deleting=true" class="btn btn-danger"> Delete </a>
+                            <a href="../views/form.php?id=<?= $currentData['id'] ?>" class="btn btn-warning"> Update </a>
                         </td>
                     </tr>
                 <?php
@@ -73,8 +75,6 @@ $data = $pesanan->daftarPesanan();
             </tbody>
 
             <a href=form.php> Back </a>
-            <!-- <a href=../Controllers/deletePesanan.php> Delete </a> -->
-
         </table>
     </div>
 
