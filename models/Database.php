@@ -5,7 +5,7 @@ class Database
 
     private function connect()
     {
-        $koneksi = mysqli_connect('localhost', 'root', 'root', 'bus');
+        $koneksi = mysqli_connect('localhost', 'root', '', 'bus');
         return $koneksi;
     }
 

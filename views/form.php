@@ -117,7 +117,7 @@ if (isset($_GET['id'])) {
                 </div>
             </div>
 
-            <button typr="submit" class="btn btn-primary"> Submit </button>
+            <button type="submit" class="btn btn-primary"> Submit </button>
 
         </form>
     </div>
